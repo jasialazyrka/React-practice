@@ -22,12 +22,12 @@ const products = productsFromServer.map(product => {
 });
 
 export const App = () => {
-  // const [filteredProducts, setFilteredProducts] = useState(products);
+
   const [selectedUser, setSelectedUser] = useState(null);
   const [query, setQuery] = useState('');
-  // const [selectedCategory, setselectedCategory] = useState([]);
+  const [selectedCategory, setselectedCategory] = useState([]);
 
-  const filterProducts = (userId, searcQuery, categoryId) => {
+  const filterProducts = (userId, searcQuery) => {
     let preparedProducts = [...products];
 
     if (userId !== null) {
